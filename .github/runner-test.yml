@@ -1,0 +1,26 @@
+
+name: Self Hosted Runner Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-runner:
+    runs-on: [self-hosted, Windows, X64]
+
+    steps:
+      - name: Check computer
+        run: hostname
+        shell: powershell
+
+      - name: Check Docker
+        run: docker --version
+        shell: powershell
+
+      - name: Check containers
+        run: docker ps
+        shell: powershell
+
+      - name: Check Python
+        run: python --version
+        shell: powershell
