@@ -13,17 +13,13 @@ jobs:
         shell: cmd
         run: hostname
 
-      - name: Add Docker to PATH
-        shell: cmd
-        run: echo C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin>>"%GITHUB_PATH%"
-
       - name: Check Docker version
         shell: cmd
-        run: docker --version
+        run: '"C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" --version'
 
       - name: Check running containers
         shell: cmd
-        run: docker ps
+        run: '"C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" ps'
 
       - name: Check Python
         shell: cmd
