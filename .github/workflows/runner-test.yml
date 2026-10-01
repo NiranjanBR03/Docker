@@ -14,12 +14,14 @@ jobs:
         run: hostname
 
       - name: Check Docker version
-        shell: cmd
-        run: docker --version
+        shell: powershell
+        run: |
+          & "C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" --version
 
       - name: Check running containers
-        shell: cmd
-        run: docker ps
+        shell: powershell
+        run: |
+          & "C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" ps
 
       - name: Check Python
         shell: cmd
