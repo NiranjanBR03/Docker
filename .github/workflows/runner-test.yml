@@ -17,7 +17,7 @@ jobs:
         shell: cmd
         run: '"C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" --version'
 
-      - name: Check Docker connection
+      - name: Check running containers
         shell: cmd
         run: '"C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" ps'
 
