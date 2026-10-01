@@ -1,4 +1,4 @@
-
+```yaml
 name: Self Hosted Runner Test
 
 on:
@@ -14,13 +14,18 @@ jobs:
         run: hostname
 
       - name: Check Docker version
-        shell: powershell
-        run: '& "C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" --version'
+        shell: cmd
+        run: '"C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" --version'
+
+      - name: Check Docker connection
+        shell: cmd
+        run: '"C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" info'
 
       - name: Check running containers
-        shell: powershell
-        run: '& "C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" ps'
+        shell: cmd
+        run: '"C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" ps'
 
       - name: Check Python
         shell: cmd
         run: python --version
+```
