@@ -7,7 +7,24 @@ on:
 jobs:
   test-runner:
     runs-on: [self-hosted, Windows, X64]
+
     steps:
       - name: Check computer
         shell: cmd
         run: hostname
+
+      - name: Check Docker version
+        shell: cmd
+        run: docker --version
+
+      - name: Check running containers
+        shell: cmd
+        run: docker ps
+
+      - name: Check Python
+        shell: cmd
+        run: python --version
+
+      - name: Check Docker using full path
+        shell: cmd
+        run: '"C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" --version'
