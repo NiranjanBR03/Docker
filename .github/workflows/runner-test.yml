@@ -1,4 +1,3 @@
-```yaml
 name: Self Hosted Runner Test
 
 on:
@@ -6,34 +5,16 @@ on:
 
 jobs:
   test-runner:
-    runs-on: [self-hosted, Windows, X64]
-
+    runs-on: self-hosted
     steps:
-      - name: Check computer
+      - name: Check Windows user
         shell: cmd
-        run: hostname
+        run: whoami
 
       - name: Check Docker version
-        shell: powershell
-        run: |
-          & "C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" --version
-
-      - name: Check running containers
-        shell: powershell
-        run: |
-          & "C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" ps
-
-      - name: Check Python
         shell: cmd
-        run: python --version
+        run: docker --version
 
-      - name: Check Docker using full path
-        shell: powershell
-        run: |
-          & "C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" --version
-
-      - name: Check Docker Engine
-        shell: powershell
-        run: |
-          & "C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" info
-```
+      - name: Check Docker engine
+        shell: cmd
+        run: docker info
