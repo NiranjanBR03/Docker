@@ -10,17 +10,17 @@ jobs:
 
     steps:
       - name: Check computer
+        shell: cmd
         run: hostname
-        shell: powershell
 
-      - name: Check Docker
+      - name: Check Docker version
+        shell: cmd
         run: docker --version
-        shell: powershell
 
-      - name: Check containers
+      - name: Check running containers
+        shell: cmd
         run: docker ps
-        shell: powershell
 
       - name: Check Python
+        shell: cmd
         run: python --version
-        shell: powershell
