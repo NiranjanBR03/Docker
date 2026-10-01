@@ -10,21 +10,21 @@ jobs:
 
     steps:
       - name: Check computer
-        shell: cmd
         run: hostname
+        shell: cmd
 
       - name: Check Docker version
-        shell: cmd
         run: docker --version
+        shell: cmd
 
       - name: Check running containers
-        shell: cmd
         run: docker ps
+        shell: cmd
 
       - name: Check Python
-        shell: cmd
         run: python --version
+        shell: cmd
 
       - name: Check Docker using full path
-        shell: cmd
         run: '"C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" --version'
+        shell: cmd
