@@ -1,23 +1,20 @@
-```yaml
 name: Self Hosted Runner Test
 
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
 
 jobs:
   test-runner:
     runs-on: self-hosted
-
     steps:
       - name: Check Windows user
-        run: whoami
         shell: cmd
+        run: whoami
 
       - name: Check Docker version
-        run: docker --version
         shell: cmd
+        run: docker --version
 
       - name: Check Docker engine
-        run: docker info
         shell: cmd
-```
+        run: docker info
