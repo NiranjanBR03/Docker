@@ -19,10 +19,6 @@ jobs:
 
       - name: Check Docker connection
         shell: cmd
-        run: '"C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" info'
-
-      - name: Check running containers
-        shell: cmd
         run: '"C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" ps'
 
       - name: Check Python
