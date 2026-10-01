@@ -1,4 +1,4 @@
-
+```yaml
 name: Self Hosted Runner Test
 
 on:
@@ -26,3 +26,14 @@ jobs:
       - name: Check Python
         shell: cmd
         run: python --version
+
+      - name: Check Docker using full path
+        shell: powershell
+        run: |
+          & "C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" --version
+
+      - name: Check Docker Engine
+        shell: powershell
+        run: |
+          & "C:\Users\DELL\AppData\Local\Programs\DockerDesktop\resources\bin\docker.exe" info
+```
