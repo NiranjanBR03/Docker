@@ -2,22 +2,22 @@
 name: Self Hosted Runner Test
 
 on:
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 jobs:
   test-runner:
-    runs-on: [self-hosted, Windows, X64]
+    runs-on: self-hosted
 
     steps:
       - name: Check Windows user
-        shell: cmd
         run: whoami
+        shell: cmd
 
       - name: Check Docker version
-        shell: cmd
         run: docker --version
+        shell: cmd
 
       - name: Check Docker engine
-        shell: cmd
         run: docker info
+        shell: cmd
 ```
