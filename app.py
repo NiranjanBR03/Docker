@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "Docker PR Demo - Version 1"
+    return "Docker CI/CD Demo - Version 2"
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
